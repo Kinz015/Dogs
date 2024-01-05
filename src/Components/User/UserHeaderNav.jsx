@@ -13,6 +13,7 @@ const UserHeaderNav = () => {
   const navigate = useNavigate();
 
   function handleLogout() {
+    userLogout();
     navigate("/login");
   }
 
