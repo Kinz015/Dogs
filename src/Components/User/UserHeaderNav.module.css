@@ -36,5 +36,5 @@
 }
 
 .nav a:global(.active) svg > * {
-  fill: #fb1
+  fill: #fb1; 
 }
