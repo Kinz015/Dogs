@@ -1,14 +1,20 @@
 import PhotoCommentsForm from "./PhotoCommentsForm";
 import { UserContext } from "../../UserContext";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import styles from "./PhotoComments.module.css";
 
 const PhotoComments = (props) => {
   const [comments, setComments] = useState(() => props.comments);
+  const commentsSection = useRef(null);
   const { login } = useContext(UserContext);
+
+  useEffect(() => {
+    commentsSection.current.scrollTop = commentsSection.current.scrollHeight
+  }, [comments]);
+
   return (
-    <div>
-      <ul className={styles.comment}>
+    <>
+      <ul ref={commentsSection} className={styles.comments}>
         {comments.map((comment) => (
           <li key={comment.comment_ID}>
             <b>{comment.comment_author}: </b>
@@ -17,7 +23,7 @@ const PhotoComments = (props) => {
         ))}
       </ul>
       {login && <PhotoCommentsForm id={props.id} setComments={setComments} />}
-    </div>
+    </>
   );
 };
 
