@@ -42,8 +42,6 @@
   overflow: hidden;
 }
 
-
-
 @media (max-width: 64rem) {
   .photo {
     height: auto;
