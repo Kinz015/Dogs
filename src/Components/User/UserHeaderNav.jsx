@@ -11,7 +11,7 @@ import useMedia from "../../Hooks/useMedia";
 const UserHeaderNav = () => {
   const { userLogout } = useContext(UserContext);
   const navigate = useNavigate();
-  const mobile = useMedia("(max-width: 40rem");
+  const mobile = useMedia("(max-width: 40rem)");
   const [mobileMenu, setMobileMenu] = useState(false);
 
 
