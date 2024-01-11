@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import Head from "../Helper/Head";
 
 const UserStatus = () => {
   return (
-    <div>Estatisticas</div>
-  )
-}
+    <div>
+      <Head title="Estatísticas" />
+      Estatísticas
+    </div>
+  );
+};
 
-export default UserStatus
+export default UserStatus;
