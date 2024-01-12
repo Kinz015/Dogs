@@ -99,3 +99,7 @@ a {
 .AppBody {
   flex: 1;
 }
+
+.VitoryContainer {
+  height: initial !important;
+}
