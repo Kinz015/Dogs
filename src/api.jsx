@@ -140,3 +140,15 @@ export function PASSWORD_RESET(body) {
     },
   };
 }
+
+export function STATS_GET(body) {
+  return {
+    url: API_URL + "/api/stats",
+    options: {
+      method: "GET",
+      Headers: {
+        Authorization: "Bearer " + window.localStorage.getItem("token"),
+      },
+    },
+  };
+}
